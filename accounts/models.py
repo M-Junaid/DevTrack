@@ -6,7 +6,7 @@ from django.contrib.auth.models import AbstractUser,BaseUserManager
 # AbstractUser       → helps us build the User
 # BaseUserManager    → helps us build the UserManager
 
-
+# we created UserManager because we wanted to control how users and superusers are created, especially because our users log in with email instead of username.
 class UserManager(BaseUserManager):
 
     def create_user(self, email, password):
